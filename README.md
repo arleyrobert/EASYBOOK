@@ -30,4 +30,4 @@ Lançamento
 
 
 
-Equipe: Allan Alves de Araujo Junior, Bruno Epaminondas Carvalho Nascimento, Nayan Mastub Souza e Robert Arley Barbosa Sousa
+Equipe: Allan Alves de Araujo Junior, Bruno Epaminondas Carvalho Nascimento e Robert Arley Barbosa Sousa
