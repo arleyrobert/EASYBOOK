@@ -5,11 +5,12 @@ include_once("conexao.php");
 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+$senha = md5($_POST['senha']);
 
 //echo "Nome: $nome <br>";
 //echo "E-mail: $email <br>";
 
-$result_usuario = "UPDATE usuarios SET nome='$nome', email='$email', modified=NOW() WHERE id='$id'";
+$result_usuario = "UPDATE usuarios SET nome='$nome', email='$email',senha='$senha', modified=NOW() WHERE id='$id'";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 
 if(mysqli_affected_rows($conn)){
