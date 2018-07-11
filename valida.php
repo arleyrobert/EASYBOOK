@@ -18,7 +18,7 @@
 			$_SESSION['usuarioNiveisAcessoId'] = $resultado['niveis_acesso_id'];
 			$_SESSION['usuarioEmail'] = $resultado['email'];
 			if($_SESSION['usuarioNiveisAcessoId'] == "1"){
-				header("Location: adm/administrativo.php");
+				header("Location: admin/index.php");
 			}elseif($_SESSION['usuarioNiveisAcessoId'] == "2"){
 				header("Location: colaborador.php");
 			}elseif($_SESSION['usuarioNiveisAcessoId'] == "3"){
