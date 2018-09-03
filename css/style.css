@@ -770,8 +770,11 @@ float: left;
         min-width:40vw;
     }
 	
-
-
-
-
+.livro{
+background-image: url('back_livro.jpg');
+background-size: 100%;
+background-repeat:no-repeat;
 }
+
+
+
