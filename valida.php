@@ -11,21 +11,28 @@
 		$resultado_usuario = mysqli_query($conn, $result_usuario);
 		$resultado = mysqli_fetch_assoc($resultado_usuario);
 		
+			$data = date("Y-m-d H:i:s");
+			$validade = date("Y-m-d H:i:s",strtotime($resultado["validade"]));
+			
+		
+		
 		//Encontrando um usuário na tabela usuario com os mesmos dados digitado pelo usuario
 		if(isset($resultado)){
 			$_SESSION['usuarioId'] = $resultado['id'];
 			$_SESSION['usuarioNome'] = $resultado['nome'];
 			$_SESSION['usuarioNiveisAcessoId'] = $resultado['niveis_acesso_id'];
 			$_SESSION['usuarioEmail'] = $resultado['email'];
+			$_SESSION['usuarioValidade'] = $resultado['validade'];
+		
 			if($_SESSION['usuarioNiveisAcessoId'] == "1"){
-				header("Location: adm/index.php");
+				header("Location: adm/administrativo.php");
 			}elseif($_SESSION['usuarioNiveisAcessoId'] == "2"){
 				header("Location: colaborador.php");
-			}elseif($_SESSION['usuarioNiveisAcessoId'] == "3"){
-				header("Location: home.php");
+			}elseif($_SESSION['usuarioNiveisAcessoId'] == "3"&&($validade>$data)){
+				header("Location: home.php?id=".$resultado['id']."");
 			}else{
-				$_SESSION['loginErro'] = "Erro - Entre em contato aeasybook@gmail.com";
-				header("Location: entrar.php");
+				$_SESSION['loginErro'] = "$data, $validade, Renove seu plano para continuar usando nossos serviços";
+				header("Location: renovar.php?id=".$resultado['id']."");
 			}
 		}else{
 			$_SESSION['loginErro'] = "Usuário ou senha inválido";
@@ -35,4 +42,5 @@
 		$_SESSION['loginErro'] = "Usuário ou senha inválido";
 		header("Location: entrar.php");
 	}
+	
 ?>

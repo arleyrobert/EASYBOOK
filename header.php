@@ -6,6 +6,8 @@
   	    <link rel="icon" type="image/png" href="imagens/favicon.ico" /> 
 		<link rel="stylesheet" href="css/style.css" type="text/css" />		
 		
+	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		
 		<link rel="stylesheet" href="boot/bootstrap-social.css" type="text/css" />
 		<title>EASY BOOK</title>
 	</head>
@@ -44,13 +46,13 @@
 			
 			<ul class="dropdown"><a class="btn btn-primary" href="entrar.php">
 			
-			Entrar</a>
+			<i class="fa fa-lock"></i> Entrar</a>
 			</span>
 			
 			
 				
 				
-				<a class="btn btn-primary" href="cadastro.php">Cadastrar</a>
+				<a class="btn btn-primary" href="cadastro.php"><i class="fa fa-user"></i> Cadastrar</a>
 			</ul>
 	            	</div>
 				</div>
