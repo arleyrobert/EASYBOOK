@@ -1,9 +1,9 @@
 <?php 
 class Conect_MySql {   
-     var $obj = array ( "dbname"	=>	"u225746644_eb",
-                       "dbuser"		=>	"u225746644_root"		,
-                       "dbpwd"		=>	"bsiufra2018"		,
-                       "dbhost"		=>	"localhost"	);
+     var $obj = array ( "dbname"	=>	"",
+                       "dbuser"		=>	""		,
+                       "dbpwd"		=>	""		,
+                       "dbhost"		=>	""	);
 
                          var $q_id	="";
                          var $ExeBit	="";
